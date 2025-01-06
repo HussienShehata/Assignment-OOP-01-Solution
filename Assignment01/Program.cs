@@ -29,46 +29,49 @@ namespace Assignment01
 
             #region Q2
 
-            //Seas_on season;
-            //bool isParsed;
+            Seas_on season;
+            bool isParsed;
 
-            //Console.WriteLine("enter the season :");
-            //do
-            //{
-            //    isParsed = Enum.TryParse<Seas_on>(Console.ReadLine(), out season);
-            //} while (!isParsed);
+            Console.WriteLine("enter the season :");
+            do
+            {
+                isParsed = Enum.TryParse<Seas_on>(Console.ReadLine(), out season);
+            } while (!isParsed);
 
-            ////Console.WriteLine(season);
+          
 
+            
+            string Months = season switch
+            {
 
-            //for (int i = 0; i < 8; i++)
-            //{
-            //    season = (Seas_on)i;
-            //    Console.WriteLine(season);
-            //}
-
+                Seas_on.spring => "Months of this season are March,April & May",
+                Seas_on.summer => "Months of this season are June , July & August",
+                Seas_on.autumn => "Months of this season are Sepember , Octocber & November",
+                Seas_on.winter => "Months of this season are December , January & February"
+            };
+            Console.WriteLine(Months);
             #endregion
 
-
+            
             #region Q3
 
-            Employee employee = new Employee();
-            {
-                employee.ID = 10;
-                employee.permissions = (Permissions)6;
-            };
+            //Employee employee = new Employee();
+            //{
+            //    employee.ID = 10;
+            //    employee.permissions = (Permissions)6;
+            //};
 
-            Console.WriteLine(employee.permissions);
+            //Console.WriteLine(employee.permissions);
 
-            employee.permissions = employee.permissions | (Permissions)8;
-            Console.WriteLine(employee.permissions);
+            //employee.permissions = employee.permissions | (Permissions)8;
+            //Console.WriteLine(employee.permissions);
 
-            if ((employee.permissions & Permissions.Delete) == Permissions.Delete)
-            {
-                employee.permissions = employee.permissions ^ Permissions.Delete;
-                Console.WriteLine(employee.permissions);
+            //if ((employee.permissions & Permissions.Delete) == Permissions.Delete)
+            //{
+            //    employee.permissions = employee.permissions ^ Permissions.Delete;
+            //    Console.WriteLine(employee.permissions);
 
-            }
+            //}
             #endregion
 
             #region Q4
