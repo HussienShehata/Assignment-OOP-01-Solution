@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace AssignmentClassLibarary01
 {
-    public enum Seas_on
+    [Flags]
+    public enum Permissions : byte
     {
-        
-       
-        spring=1,
-        summer,
-        autumn ,
-        winter
+        Read=1,
+        Write=2,
+        Delete=4,
+        Execute=8
     }
 }

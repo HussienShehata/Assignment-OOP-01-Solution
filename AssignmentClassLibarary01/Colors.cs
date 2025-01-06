@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace AssignmentClassLibarary01
 {
-    public enum Seas_on
+    [Flags]
+    public enum Colors
     {
-        
-       
-        spring=1,
-        summer,
-        autumn ,
-        winter
+        Red=1,
+        Green=2,
+        Blue =4
     }
 }

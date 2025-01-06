@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace AssignmentClassLibarary01
 {
-    public enum Seas_on
+    public class Employee
     {
-        
-       
-        spring=1,
-        summer,
-        autumn ,
-        winter
+        public int ID { get; set; }
+        public Permissions permissions { get; set; }    
     }
 }
